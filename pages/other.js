@@ -6,11 +6,13 @@ import { wrapper } from "../redux/store";
 import { addUser } from "../redux/users/action";
 
 const Other = (props) => {
+  console.log(props.data);
 
   return (
   <>
   <SEO meta={props}/>
   <Page title="Other Page" linkTo="/" />
+  <span>{props.data.email}</span>
   </>)
 };
 
@@ -27,7 +29,8 @@ export const getServerSideProps = wrapper.getServerSideProps((store) => async ()
   return{
     props:{
       title:"example1",
-      desc:"this is decs"
+      desc:"this is decs",
+      data:data
     }
   }
 });
