@@ -7,8 +7,12 @@ const Index = (props) => {
 };
 
 export default Index;
+
 //داخل آرگومان اول به استور دسترسی داریم
 //داخل آرگومان دوم میتوانیم به ریکویست و ریسپانس دسترسی داشته باشیم
+
+
+
 export const getStaticProps = wrapper.getStaticProps((store) => () => {
   store.dispatch(incrementCounter());
 });
